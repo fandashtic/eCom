@@ -18,7 +18,7 @@ UserRoute.propTypes = {
 
 function mapStateToProps(state) {
  return {
-   isAuthenticated: (Object.keys(state.auth.loggedUser).length > 0 || localStorage.zwaarJWT) ? true : false
+   isAuthenticated: (Object.keys(state.auth.loggedUser).length > 0 || localStorage.ecomJWT) ? true : false
  };
 }
 

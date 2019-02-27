@@ -1,5 +1,5 @@
 {
-  "name": "students-portal",
+  "name": "ecom",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,6 +20,7 @@
     "chalk": "2.4.1",
     "classnames": "2.2.6",
     "css-loader": "1.0.0",
+    "csvtojson": "^2.0.8",
     "dotenv": "6.0.0",
     "dotenv-expand": "4.2.0",
     "eslint": "5.6.0",
@@ -31,6 +32,7 @@
     "eslint-plugin-react": "7.11.1",
     "file-loader": "2.0.0",
     "firebase": "^5.8.1",
+    "fs": "0.0.1-security",
     "fs-extra": "7.0.0",
     "history": "4.7.2",
     "html-webpack-plugin": "4.0.0-alpha.2",
@@ -38,6 +40,7 @@
     "jest": "23.6.0",
     "jest-pnp-resolver": "1.0.1",
     "jest-resolve": "23.6.0",
+    "jsonwebtoken": "^8.4.0",
     "jwt-decode": "^2.2.0",
     "mini-css-extract-plugin": "0.4.3",
     "optimize-css-assets-webpack-plugin": "5.0.1",
@@ -51,6 +54,7 @@
     "react-bootstrap": "^1.0.0-beta.1",
     "react-dev-utils": "^6.0.5",
     "react-dom": "^16.5.2",
+    "react-file-reader": "^1.1.4",
     "react-notification-system": "^0.2.17",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",

@@ -7,6 +7,9 @@ import thunk from 'redux-thunk';
 import rootReducer from './rootReducer'
 import App from './App'
 import * as serviceWorker from './serviceWorker';
+import setAuthorizationToken from 'utils/setAuthorizationToken';
+import decode from 'jwt-decode';
+import { validateUserLoggedIn } from 'actions/auth';
 
 /*let loadScript = function(href, rel="", type="") {
     let link = document.createElement('link')
@@ -29,14 +32,15 @@ const store = createStore(
 );
 
 /*if (localStorage.ecomJWT) {
-  setAuthorizationToken(localStorage.ecomJWT);
-  const payload = decode(localStorage.ecomJWT);
+  //setAuthorizationToken(localStorage.ecomJWT);
+  let payload = decode(localStorage.ecomJWT)
+  console.log("test",payload)
   const user = {
     userId: payload.id,
     userName: payload.name,
     userEmail: payload.email
   };
-  store.dispatch(validateStudentLoggedIn(user))
+  //store.dispatch(validateStudentLoggedIn(user))
 }*/
 
 render( 

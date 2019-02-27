@@ -1,6 +1,8 @@
 import axios from "axios";
 import * as firebase from "firebase";
 import { ref, companyData} from 'service/fireBase';
+import config from 'config/jsonWebToken';
+import jwt from 'jsonwebtoken'
 
 export const COMPANY_LOGGED_IN = "COMPANY_LOGGED_IN";
 export const COMPANY_LOGGED_OUT = "COMPANY_LOGGED_OUT";
@@ -20,10 +22,10 @@ export const companyLoggedOut = () => ({
 export const login = credentials => dispatch => {
   return firebase.auth().signInWithEmailAndPassword(credentials.email, credentials.password)
   .then((result) => {
-        const token = {"id" : result.user.uid, "email" :credentials.email,'secret':{ expiresIn:"5h" }};
+         const token = {"id" : result.user.uid, "email" :credentials.email,'secret':{ expiresIn:"5h" }};
          localStorage.ecomJWT = token;
           dispatch(companyLoggedIn(token))
-           return  token
+          return  token
     })
   .catch(error => {
     let err = {
@@ -70,6 +72,12 @@ export const register = (data) =>  dispatch => {
     }
     return err
    })
-  
-
 }
+
+export const validateUserLoggedIn = user => dispatch => {
+  console.log(user)
+}
+
+export const fileUpload = (data) => dispatch => {
+  console.log(data)
+};

@@ -21,8 +21,9 @@ GuestRoute.propTypes = {
 };
 
 function mapStateToProps(state) {
+	var	isAuthenticated =  ((Object.keys(state.auth.loggedUser) !== undefined && Object.keys(state.auth.loggedUser).length > 0)  || localStorage.ecomJWT) ? true : false
  return {
-   isAuthenticated: (Object.keys(state.auth.loggedUser).length > 0 || localStorage.ecomJWT) ? true : false
+ 	isAuthenticated
  };
 }
 
